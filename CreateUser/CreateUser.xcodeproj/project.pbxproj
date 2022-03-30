@@ -3,7 +3,7 @@
 	archiveVersion = 1;
 	classes = {
 	};
-	objectVersion = 50;
+	objectVersion = 52;
 	objects = {
 
 /* Begin PBXBuildFile section */
@@ -20,7 +20,33 @@
 		B74B46AE27F4B16D00E93304 /* CreateUserViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B74B46AC27F4B16D00E93304 /* CreateUserViewController.swift */; };
 		B74B46AF27F4B16D00E93304 /* CreateUser.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = B74B46AD27F4B16D00E93304 /* CreateUser.storyboard */; };
 		B7E0E01727F4BBEB00D9BF82 /* UIActivityIndicatorView+toggle.swift in Sources */ = {isa = PBXBuildFile; fileRef = B7E0E01627F4BBEB00D9BF82 /* UIActivityIndicatorView+toggle.swift */; };
+		B7F85AC227F4DC68009BD5F3 /* CreateUser.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B77FD74C27F4AABA0010417F /* CreateUser.framework */; platformFilter = ios; };
+		B7F85AC327F4DC68009BD5F3 /* CreateUser.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = B77FD74C27F4AABA0010417F /* CreateUser.framework */; platformFilter = ios; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 /* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		B7F85AC427F4DC68009BD5F3 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = B77FD74327F4AABA0010417F /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = B77FD74B27F4AABA0010417F;
+			remoteInfo = CreateUser;
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXCopyFilesBuildPhase section */
+		B7F85AC627F4DC68009BD5F3 /* Embed Frameworks */ = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 2147483647;
+			dstPath = "";
+			dstSubfolderSpec = 10;
+			files = (
+				B7F85AC327F4DC68009BD5F3 /* CreateUser.framework in Embed Frameworks */,
+			);
+			name = "Embed Frameworks";
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
 		B729F0F427F4AC7F005324A9 /* CreateUserPresenter.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CreateUserPresenter.swift; sourceTree = "<group>"; };
@@ -47,6 +73,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				B7F85AC227F4DC68009BD5F3 /* CreateUser.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -148,6 +175,7 @@
 				B77FD74E27F4AABA0010417F /* CreateUser */,
 				B74B46A127F4B15000E93304 /* CreateUseriOS */,
 				B77FD74D27F4AABA0010417F /* Products */,
+				B7F85AC127F4DC68009BD5F3 /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -179,6 +207,13 @@
 			path = Helpers;
 			sourceTree = "<group>";
 		};
+		B7F85AC127F4DC68009BD5F3 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXHeadersBuildPhase section */
@@ -207,10 +242,12 @@
 				B74B469C27F4B15000E93304 /* Sources */,
 				B74B469D27F4B15000E93304 /* Frameworks */,
 				B74B469E27F4B15000E93304 /* Resources */,
+				B7F85AC627F4DC68009BD5F3 /* Embed Frameworks */,
 			);
 			buildRules = (
 			);
 			dependencies = (
+				B7F85AC527F4DC68009BD5F3 /* PBXTargetDependency */,
 			);
 			name = CreateUseriOS;
 			productName = CreateUseriOS;
@@ -317,6 +354,15 @@
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		B7F85AC527F4DC68009BD5F3 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			platformFilter = ios;
+			target = B77FD74B27F4AABA0010417F /* CreateUser */;
+			targetProxy = B7F85AC427F4DC68009BD5F3 /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
 
 /* Begin XCBuildConfiguration section */
 		B74B46A627F4B15000E93304 /* Debug */ = {
