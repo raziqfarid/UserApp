@@ -15,7 +15,7 @@ public protocol UserListViewControllerDelegate {
 public class UserListViewController: UITableViewController, UserLoadingView, UserErrorView {
     
     @IBOutlet private(set) public var errorView: ErrorView?
-
+    
     private var tableModel = [UserCellController]() {
         didSet { tableView.reloadData() }
     }
@@ -49,7 +49,7 @@ public class UserListViewController: UITableViewController, UserLoadingView, Use
     public func display(_ viewModel: UserErrorViewModel) {
         errorView?.message = viewModel.message
     }
-
+    
     public override func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         return tableModel.count
     }
