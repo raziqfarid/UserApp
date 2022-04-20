@@ -30,9 +30,7 @@ public final class UserListUIComposer {
     }
 
     private static func makeUserViewController(delegate: UserListViewControllerDelegate, title: String) -> UserListViewController {
-        let bundle = Bundle(for: UserListViewController.self)
-        let storyboard = UIStoryboard(name: "UserList", bundle: bundle)
-        let userController: UserListViewController = storyboard.instantiate()
+        let userController: UserListViewController = UserListViewController.storyboard.instantiate()
         userController.delegate = delegate
         userController.title = title
         return userController

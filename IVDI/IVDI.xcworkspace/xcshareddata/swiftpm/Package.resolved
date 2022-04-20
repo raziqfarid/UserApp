@@ -1,0 +1,25 @@
+{
+  "object": {
+    "pins": [
+      {
+        "package": "UserListiOS",
+        "repositoryURL": "https://github.com/raziqfarid/UserListiOSPackage.git",
+        "state": {
+          "branch": null,
+          "revision": "f075c0db06368d26ed4a07e6c26e1a6db64298b1",
+          "version": "0.1.6"
+        }
+      },
+      {
+        "package": "UserList",
+        "repositoryURL": "https://github.com/raziqfarid/UserListPackage.git",
+        "state": {
+          "branch": null,
+          "revision": "1aeda77cc9166d1849a6258dbbc520ef2bccbdd6",
+          "version": "0.1.1"
+        }
+      }
+    ]
+  },
+  "version": 1
+}

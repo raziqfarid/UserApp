@@ -3,7 +3,7 @@
 	archiveVersion = 1;
 	classes = {
 	};
-	objectVersion = 50;
+	objectVersion = 52;
 	objects = {
 
 /* Begin PBXBuildFile section */
@@ -20,14 +20,11 @@
 		B71E324327F42F2D0076B2CB /* URLSessionHTTPClient.swift in Sources */ = {isa = PBXBuildFile; fileRef = B71E323B27F42F2D0076B2CB /* URLSessionHTTPClient.swift */; };
 		B729F11427F4ACA7005324A9 /* CreateUser.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B729F11227F4ACA7005324A9 /* CreateUser.framework */; };
 		B729F11527F4ACA7005324A9 /* CreateUser.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = B729F11227F4ACA7005324A9 /* CreateUser.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
-		B729F11627F4ACA7005324A9 /* UserList.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B729F11327F4ACA7005324A9 /* UserList.framework */; };
-		B729F11727F4ACA7005324A9 /* UserList.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = B729F11327F4ACA7005324A9 /* UserList.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 		B741A45827F454490068EA96 /* CreateUserViewAdapter.swift in Sources */ = {isa = PBXBuildFile; fileRef = B741A45727F454490068EA96 /* CreateUserViewAdapter.swift */; };
 		B741A45B27F455760068EA96 /* UserCreatorPresentationAdapter.swift in Sources */ = {isa = PBXBuildFile; fileRef = B741A45A27F455760068EA96 /* UserCreatorPresentationAdapter.swift */; };
 		B74B46B727F4B2F700E93304 /* CreateUseriOS.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B74B46B627F4B2F700E93304 /* CreateUseriOS.framework */; };
 		B74B46B827F4B2F700E93304 /* CreateUseriOS.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = B74B46B627F4B2F700E93304 /* CreateUseriOS.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
-		B74B46BA27F4B2FB00E93304 /* UserListiOS.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B74B46B927F4B2FB00E93304 /* UserListiOS.framework */; };
-		B74B46BB27F4B2FB00E93304 /* UserListiOS.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = B74B46B927F4B2FB00E93304 /* UserListiOS.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
+		B7708A3E280ECFA500425FB2 /* UserListiOS in Frameworks */ = {isa = PBXBuildFile; productRef = B7708A3D280ECFA500425FB2 /* UserListiOS */; };
 		B77FD72327F46C050010417F /* APIEndpoint.swift in Sources */ = {isa = PBXBuildFile; fileRef = B77FD72227F46C050010417F /* APIEndpoint.swift */; };
 		B77FD72927F4A83B0010417F /* UIViewController+Identifier.swift in Sources */ = {isa = PBXBuildFile; fileRef = B77FD72827F4A83B0010417F /* UIViewController+Identifier.swift */; };
 /* End PBXBuildFile section */
@@ -40,9 +37,7 @@
 			dstSubfolderSpec = 10;
 			files = (
 				B729F11527F4ACA7005324A9 /* CreateUser.framework in Embed Frameworks */,
-				B729F11727F4ACA7005324A9 /* UserList.framework in Embed Frameworks */,
 				B74B46B827F4B2F700E93304 /* CreateUseriOS.framework in Embed Frameworks */,
-				B74B46BB27F4B2FB00E93304 /* UserListiOS.framework in Embed Frameworks */,
 			);
 			name = "Embed Frameworks";
 			runOnlyForDeploymentPostprocessing = 0;
@@ -79,9 +74,8 @@
 			buildActionMask = 2147483647;
 			files = (
 				B729F11427F4ACA7005324A9 /* CreateUser.framework in Frameworks */,
-				B729F11627F4ACA7005324A9 /* UserList.framework in Frameworks */,
+				B7708A3E280ECFA500425FB2 /* UserListiOS in Frameworks */,
 				B74B46B727F4B2F700E93304 /* CreateUseriOS.framework in Frameworks */,
-				B74B46BA27F4B2FB00E93304 /* UserListiOS.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -196,6 +190,9 @@
 			dependencies = (
 			);
 			name = IVDI;
+			packageProductDependencies = (
+				B7708A3D280ECFA500425FB2 /* UserListiOS */,
+			);
 			productName = IVDI;
 			productReference = B709712F27EDBD030069AB6B /* IVDI.app */;
 			productType = "com.apple.product-type.application";
@@ -223,6 +220,9 @@
 				Base,
 			);
 			mainGroup = B709712627EDBD030069AB6B;
+			packageReferences = (
+				B7708A3C280ECFA500425FB2 /* XCRemoteSwiftPackageReference "UserListiOSPackage" */,
+			);
 			productRefGroup = B709713027EDBD030069AB6B /* Products */;
 			projectDirPath = "";
 			projectRoot = "";
@@ -455,6 +455,25 @@
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
+
+/* Begin XCRemoteSwiftPackageReference section */
+		B7708A3C280ECFA500425FB2 /* XCRemoteSwiftPackageReference "UserListiOSPackage" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/raziqfarid/UserListiOSPackage.git";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 0.1.4;
+			};
+		};
+/* End XCRemoteSwiftPackageReference section */
+
+/* Begin XCSwiftPackageProductDependency section */
+		B7708A3D280ECFA500425FB2 /* UserListiOS */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = B7708A3C280ECFA500425FB2 /* XCRemoteSwiftPackageReference "UserListiOSPackage" */;
+			productName = UserListiOS;
+		};
+/* End XCSwiftPackageProductDependency section */
 	};
 	rootObject = B709712727EDBD030069AB6B /* Project object */;
 }
